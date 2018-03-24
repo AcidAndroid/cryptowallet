@@ -45,7 +45,7 @@
                         <hr>
                         <div class="form-group form-row">
                             <label for="totalbalance" class="col-xs-2 col-4 text-balance">Great Total:</label>
-                            <input id="totalbalance" class="col-xs-2 col-4 form-control" type="number" readonly placeholder="Greate Balance">
+                            <input id="totalbalance" class="col-xs-2 col-4 form-control" type="number" readonly placeholder="Great Balance">
                             <select name="" class="col-xs-2 col-4 form-control">
                                         <option value="USD" >USD</option>
                                     </select>
@@ -139,7 +139,7 @@
         function fillBalances() {
             //por cada cuenta lo llena en su respectivo text y dropdown
             for (let index = 0; index < cartera.accounts.length; index++) {
-                console.log(document.getElementsByClassName("balance")[index])
+                //console.log(document.getElementsByClassName("balance")[index])
                 accountBalances[index].value = cartera.accounts[index].getBalance()
                 options[index].innerHTML = "<option>" + cartera.accounts[index].getSymbol() + "</option>"
             }

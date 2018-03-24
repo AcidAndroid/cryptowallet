@@ -60,12 +60,17 @@ CriptoAccount.prototype.transfer = function(account1, account2, amount) {
         return
     }
     //realiza la conversion a USD antes de cambirla a la moneda destino
-    console.log((account1.balance * account1.rateInUSD) / account2.rateInUSD)
-    amountDestiny = (account1.balance * account1.rateInUSD) / account2.rateInUSD
+    //console.log((account1.balance * account1.rateInUSD) / account2.rateInUSD)
+    amountDestiny = Number((account1.balance * account1.rateInUSD) / account2.rateInUSD)
 
     //le restamos el monto
     account1.balance -= amount
-    account2.balance += amountDestiny
+    account2.balance += Math.round(amountDestiny, 2)
+
+    // console.log(Number(amountDestiny).toFixed(2));
+    // console.log(Number(amount).toFixed(2));
+    // console.log(account1.balance)
+    // console.log(account2.balance)
 }
 
 //Por cada coin genero un objeto y lo agrego al wallet
