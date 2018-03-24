@@ -7,18 +7,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </head>
 
 <body onload="carga()">
 
     <div class="card">
-        <div class="card-header">
-            Ejemplo
+        <div class="card-header hf h">
+            <img src="icon.png" alt="logo" srcset=""> Crazy crypto. Get rich now or never!
         </div>
         <div class="card-body">
-            <h5 class="card-title">Crypto currency wallet</h5>
+            <h3 class="card-title">Accounts</h3>
             <div class="container ">
                 <div class="row justify-content-center ">
                     <div class="col-6" id="wallet">
@@ -40,8 +44,9 @@
                         </div>
                         <hr>
                         <div class="form-group form-row">
-                            <input id="totalbalance" class="col-6 form-control" type="number" readonly placeholder="Greate Balance">
-                            <select name="" class="col-6 form-control">
+                            <label for="totalbalance" class="col-xs-2 col-4 text-balance">Great Total:</label>
+                            <input id="totalbalance" class="col-xs-2 col-4 form-control" type="number" readonly placeholder="Greate Balance">
+                            <select name="" class="col-xs-2 col-4 form-control">
                                         <option value="USD" >USD</option>
                                     </select>
                         </div>
@@ -56,14 +61,14 @@
 
                         </div>
                         <div class="form-row form-group">
-                            <label class=" col-6 col-form-label" style="text-align:end;" for="transfer2">Transfer to:</label>
+                            <label class=" col-6 col-form-label text-balance" for="transfer2">Transfer to:</label>
                             <!-- <input class="col-6 col-form-label form-control" type="number" name="" id=""> -->
                             <select class=" col-6 form-control coinsTransfer" name="" id="transfer2"></select>
 
                         </div>
                         <div class="form-row form-group justify-content-end">
                             <div class="col" style="display:  flex;justify-content: flex-end;">
-                                <button id="transfer" type="submit" class="btn btn-primary" onclick="Transfer()">Transfer</button>
+                                <button id="transfer" type="submit" class="btn btn-outline-warning" onclick="Transfer()">Transfer</button>
                             </div>
                         </div>
 
@@ -74,7 +79,7 @@
 
             </div>
         </div>
-        <div class="card-footer">
+        <div class="card-footer hf foot">
             <h6>Creado por Acid Android</h6>
         </div>
     </div>
